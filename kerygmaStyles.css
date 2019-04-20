@@ -1,0 +1,1620 @@
+
+html {
+	font-size: 12px;
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background: #F5F5F56B;
+	overflow-x: hidden;
+	/* cursor: url('../recursos/imagenes/kerygma/papyrus.png') , auto; */
+}
+
+/* Scrollbar Styles for WebKit */
+
+::-webkit-scrollbar {
+	height: 8px;
+	width: 6px;
+	border: none;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #808080c7;
+	border-radius: 10px;
+}
+
+#panelMin {
+	height: 105%;
+	width: 3.5%;
+	min-width: 42.6563px;
+	min-height: 737.094px;
+	position: fixed;
+	z-index: 1;
+	margin: -1% 0 0 -1%;
+	background-color: rgb(32, 37, 45);
+}
+
+#buttonsContainer {
+	height: 100%;
+	width: 100%;
+	background-color: transparent;
+}
+
+.optionsButtons {
+	width: 90%;
+    height: 3%;
+	background-color: transparent;
+    background-size: 50% 90%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: none;
+    margin-top: 30%;
+	margin-left: 10%;
+	cursor: pointer;
+}
+
+#collapseButton {
+	width: 100%;
+    height: 4%;
+	background-color: transparent;
+    background-image: url(../recursos/imagenes/Kerygma/ag.png);
+    background-size: 60% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: none;
+    margin: 20% 0 0 5.5%;
+	cursor: pointer;
+}
+
+#collapseButton:hover {
+	background-color: #a92c2c;
+}
+
+#showStudents {
+	background-image: url(../recursos/imagenes/Kerygma/userWhite.png);
+}
+
+#showGeneral {
+	background-image: url(../recursos/imagenes/Kerygma/houseWhite.png);
+}
+
+#searchData {
+	background-image: url(../recursos/imagenes/Kerygma/searchWhite.png);
+}
+
+#viewHelp {
+	background-image: url(../recursos/imagenes/Kerygma/questionMark.png);
+}
+
+#showStudents:hover , #showGeneral:hover , #searchData:hover {
+	background-color: #1e81d0;
+}
+
+#viewHelp:hover {
+	background-color: white;
+	background-image: url(../recursos/imagenes/Kerygma/questionMarkBlack.png);
+}
+
+/* Home:General Resume Styles */
+
+#superiorHeader {
+	background-color: white;
+    border: 1px solid black;
+    width: 98%;
+    margin: -0.6% 0 0 2.5%;
+    height: 3.6%;
+    min-height: 24.7188px;
+    position: absolute;
+}
+
+#superiorHeader > p {
+	text-align: center;
+	font-family: 'Raleway', Arial;
+	font-size: 210%;
+	color: black;
+	margin: -0.1% 0 0 2.5%;
+}
+
+#supLogo {
+	text-align: right;
+	height: 100%;
+	width: 10%;
+	margin: -2% 0 0 90%;
+}
+
+#generalResume {
+	width: 95.7%;
+	height: 42.06%;
+	min-width: 1077.58px;
+	min-height: 273.797px;
+	position: absolute;
+	margin: 2% 0 0 3%;
+	border: 1.5px dashed black;
+	text-align: center;
+	white-space: nowrap;
+	overflow-x: auto;
+}
+
+#generalResume > p {
+	text-align: center;
+	font-family: 'Nahum Gothic', Trebuchet MS;
+	font-weight: bold;
+	font-size: 1.5rem;
+	margin-top: -0.1%;
+}
+
+.resumeBoxes {
+	display: inline-block;
+	width: 20%;
+	height: 75%;
+	min-width: 224.891px;
+	min-height: 232.359px;
+	background-color: white;
+	box-shadow: 0px 0px 13px 0px silver;
+	margin-top: 4%;
+	border-radius: 4.5%;
+	vertical-align: top;
+	overflow-x: hidden;
+	opacity: 0;
+	white-space: nowrap;
+}
+
+#teachersResume, #adminResume , #academicResume {
+	margin-left: 4%;
+}
+
+
+.boxTitle {
+	width: 100%;
+	height: 15%;
+	border-bottom: 1px solid black;
+	text-align: left;
+}
+
+#studentsResume > .boxTitle {
+	background-color: #3083A5;
+}
+
+#teachersResume > .boxTitle {
+	background-color: #08C9F5;
+}
+
+#adminResume > .boxTitle {
+	background-color: #7B54F1;
+}
+
+#academicResume > .boxTitle {
+	background-color: #E04931;
+}
+
+.boxTitle > p {
+	font-family:  'Raleway', Candara;
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: whitesmoke;
+	display: inline-block;
+	margin-left: 2%;
+	vertical-align: top;
+}
+
+.boxesIcons {
+	display: inline-block;
+	width: 20%;
+	height: 135%;
+}
+
+#studentsResume > .boxTitle > .boxesIcons {
+	margin: 0 0 0 39%;
+}
+
+#teachersResume > .boxTitle > .boxesIcons {
+	margin: 0 0 0 45%;
+}
+
+#adminResume > .boxTitle > .boxesIcons {
+	margin: 0 0 0 12%;
+}
+
+#academicResume > .boxTitle > .boxesIcons {
+	margin: 0 0 0 39%;
+}
+
+.innerData {
+	width: 100%;
+	height: 84%;
+	background-color: transparent;
+	text-align: left;
+	overflow-y: hidden;
+	white-space: nowrap;
+}
+
+.clubRegInfo {
+	display: block;
+	margin: 0.5%;
+	color: black;
+	font-family: Lato , Arial;
+	font-size: 120%;
+}
+
+.innerData > span , .innerData > p {
+	display: inline-block; 
+	margin-left: 2%;
+	font-family: 'Nahum Gothic', Trebuchet MS;
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: black;
+}
+
+
+#smallClubsCont , #smallClubsContStudents {
+	display: block;
+	width: 95%;
+	height: 50%;
+	margin: 0 auto;
+	border: 1px dashed black;
+	text-align: center;
+	overflow-y: auto;
+	white-space: normal;
+}
+
+.smallClubsIcons {
+	display: inline-block;
+	height: 30%;
+	width: 13%;
+	margin: 2% 0 0 1%;
+	font-family: 'Raleway', Arial;
+	border: 1px solid black;
+	border-radius: 50%;
+	color : black;
+	background: #f5f5f5ad;
+	cursor: pointer;
+}
+
+.smallClubsIcons span {
+	display: inline-block;
+	line-height: 34px;
+}
+
+.obtainedTeachers {
+	margin : 0;
+	font-family: 'Raleway', Arial;
+	font-size: 110%;
+}
+
+#backToMin , #backToMinSt {
+	height: 20%;
+	width: 9%;
+	border: none;
+	border-radius: 50%;
+	color: white;
+	background-color: rgba(20, 189, 113, 0.84);
+}
+
+.innerData > p {
+	font-weight: normal;
+}
+
+/*
+#teachersResume > .boxTitle > .boxesIcons {
+	margin: 0 0 0 40.5%;
+} */
+
+/* Resume boxes Buttons */
+
+.viewData {
+	display: block;
+	width: 50%;
+	height: 10%;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	font-family: 'Raleway' , Lato;
+	font-weight: bold;
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+
+#studentsDataB {
+	margin: -14% auto 0 auto;
+}
+
+#adminDataB {
+	margin : 17% auto 0 auto;
+	background-color: rgb(123, 84, 241);
+}
+
+#teachersDataB {
+	margin : 3% auto 0 auto;
+	background-color: rgb(8, 201, 245);
+}
+
+#adminDataB:hover , #studentsDataB:hover , #teachersDataB:hover {
+	font-weight: normal;
+	color: black;
+	background-color: white;
+	border: 1px solid gray;
+	box-shadow: 0px 0px 1px 1px #80808094;
+}
+
+
+
+/* End of resume boxes Buttons */
+/* End of General Resume */
+
+/* Clubs Bar Styles */
+
+#clubsBarContainer {
+	position: absolute;
+	width: 97%;
+	height: 150px;
+	border: 1px dashed black;
+	margin: 30% 0 0 2.5%;
+}
+
+#clubsBarContainer > p {
+	text-align: center;
+    font-family: 'Nahum Gothic', Trebuchet MS;
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-top: -0.1%;
+}
+
+#clubsBar {
+	width: 99%;
+	height: 70%;
+	margin: -1% auto 0 auto;
+	border: 1px solid black;
+	text-align: center;
+}
+
+.clubsIconsCont {
+	display: inline-block;
+	width: 10%;
+	height: 95%;
+	border: 1px dashed black;
+	text-align: center;
+}
+
+.clubIcons {
+	width: 72%;
+	height: 95%;
+	margin: 0 auto;
+	border: 1px solid black;
+	border-radius: 50%;
+	text-align: center;
+	font-family: 'Raleway', Arial;
+	font-size: 265%;
+	line-height: 300%;
+	color: white;
+	cursor: pointer;
+}
+
+.clubIcons:hover {
+	background-color: silver;
+	transition: background-color 0.2s ease-in-out;
+}
+
+.clubsIconsCont p {
+    margin-top: -3%;
+    font-family:  'Raleway', Arial;
+    font-size: 1.2rem;
+}
+
+/* End of club's bar styles */
+
+/* Club's data containers */
+
+#clubType1 , #clubType2 , #personalTable , #itemDataContainer {  
+	display: none;
+	width: 80%;
+	height: 95%;
+	border-radius: 10px;
+	position: absolute;
+	top: 5%;
+	left: 11.5%;
+	background-color: white;
+	box-shadow : 0px 0px 10px 1px silver;
+}
+
+.returnBtn {
+	position: absolute;
+	width: 5%;
+	height: 5%;
+	background-color: transparent;
+	margin: 0 0 0 -10%;
+	text-align: center;
+}
+
+.returnBtn > img {
+	display: block;
+	border-radius: 50%;
+	margin-left: 12%;
+	cursor: pointer;
+}
+
+.returnBtn > img:hover {
+	background-color: #00000017;
+}
+
+.returnBtn > p {
+	margin-top: 5%;
+	font-family: 'Raleway', Arial;
+}
+
+.clubName , .tableTitle {
+	text-align: center;
+	font-size: 1.5rem;
+	font-family: 'Raleway', Lato, Arial;
+}
+
+.icon {
+	display: inline-block;
+	width: 20%;
+	height: 20%;
+	margin-left: 1%;
+	border-radius: 10px;
+}
+
+.icon > .innerClubIcon {
+	display: block;
+	width: 70%;
+	height: 97%;
+	margin: 0 auto;
+	border-radius: 50%;
+	background-color: red;
+	text-align: center;
+	font-family: 'Raleway', Arial;
+	font-size: 5rem;
+	line-height: 150px;
+	color: white;
+
+}
+
+.info {
+	display: inline-block;
+	width: 75%;
+	height: 20%;
+	border: none;
+	border-radius: 8px;
+	margin : 0 0 0 3%;
+	vertical-align: top;
+	background-color: white;
+	box-shadow: 0px 0px 7px 0px silver;
+	white-space: nowrap;
+}
+
+.infoTotalStudents, .infoTotalMen, .infoTotalWomen, .infoAges , .infoTeachers , .totalPersonal {
+	display: inline-block;
+	font-size: 1.3rem;
+	font-family: Lato, Arial;
+	margin-top: 0.3%;
+}
+
+.infoTotalStudents::before , .infoTeachers::before , .totalPersonal::before {
+	content: "Estudiantes totales:";
+	font-family: 'Raleway' , Trebuchet MS, Lato, Arial;
+	font-size: 1.3rem;
+	font-weight: bold;
+	padding-left: 5px;
+}
+
+.infoTeachers::before {
+	content: "Mentores: ";
+}
+
+.totalPersonal::before {
+	content: "Total de Mentores: ";
+}
+
+.infoTotalMen::before , .infoTotalWomen::before {
+	content: "Varones:";
+	font-family: Trebuchet MS;
+	font-size: 1.3rem;
+	font-weight: bold;
+	color: #25d625;
+	padding-left: 12px;
+}
+
+.infoTotalWomen::before {
+	content: "Hembras:";
+	color: #E98092;
+}
+
+.infoAges::before {
+	content: "Edades: ";
+	font-family: Trebuchet MS;
+	font-size: 1.3rem;
+	font-weight: bold;
+	padding-left: 12px;
+}
+
+.editDataInner { /* Inner buttons of club's screens to edit data */
+	display: inline-block;
+	background-color: transparent;
+	width: 16.5%;
+	height: 18.5%;
+	border: 1px solid #DCDCDC;
+	border-radius: 10px;
+	margin-top: 4%;
+	margin-left: 0.5%;
+	line-height: : 90px;
+	cursor: pointer;
+	vertical-align: top;
+}
+
+.editDataInner:hover , .removeStudent:hover , .moveStudent:hover , .seeItem:hover {
+	background-color: #DCDCDC3D;
+	-webkit-transition: background-color 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out;
+}
+
+.editDataInner > img , .editDataInner > p {
+	display: inline-block;
+}
+
+.editDataInner > p {
+	color: black;
+	font-family: 'Raleway', Arial;
+	font-size: 96%;
+	vertical-align: middle;
+	margin : -14% 0 0 0;
+}
+
+.addStudent {
+	margin-left: 20%;
+}
+
+.addPersonal {
+	margin-left: 20%;
+}
+
+/*
+.removeStudent > p , #editStudent > p , .moveStudent > p , .seeItem > p {
+	margin: -13.5% 0 0 1.2%;
+} */
+
+.removeStudent , .removePersonal , .seeItem {
+	width: 18%;
+	background-color: rgba(220, 220, 220, 0.63);
+	pointer-events: none;
+}
+
+#editStudent {
+	display: none;
+}
+
+.moveStudent {
+	width: 19%;
+	background-color: rgba(220, 220, 220, 0.63);
+	pointer-events: none;
+}
+
+.moveStudent > img {
+	margin-left: 1%;
+}
+
+/* Find item in table */
+.findInTableContainer {
+	display: block;
+	width: 50%;
+	height: 1.8vw;
+	border: 1px solid #8080803d;
+	margin: 1% auto;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.findInTableContainer > input {
+	display: inline-block;
+	height: 100%;
+	width: 90%;
+	margin:  0 0 0 0.4%;
+	border: none;
+	font-family: 'Raleway' , Lato , Arial;
+	font-size: 130%;
+	text-transform: capitalize;
+}
+
+
+.findInTableContainer > input:focus {
+	outline: 0;
+}
+	
+.data {
+	width: 99%;
+	height: 70%;
+	margin: 1% auto;
+	overflow: auto;
+}
+
+#itemDataContainer > .data {
+	border: 1px solid gray;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.personalDataContainer , .academicDataContainer {
+	width: 95%;
+	height: 95%;
+	margin: 0 auto;	
+	box-shadow: 0px 0px 5px 0px silver;
+	border-radius: 10px;
+	text-align: center;
+	overflow: auto;
+}
+
+.academicDataContainer {
+	display: none;
+}
+
+.personalDataContainer > p , .academicDataContainer > p {
+	display: inline-block;
+}
+
+.fieldVal {
+	display: inline-block;
+}
+
+.clubType1DataList, .clubType2DataList , .personalDataTable {
+	width: 99%;
+	margin: 0 auto;
+	border-radius: 10px;
+	border-collapse: collapse;
+	box-shadow: 0px 0px 10px 0px silver;
+}
+
+.clubType1DataList > thead  , .clubType2DataList > thead , .personalDataTable > thead {
+	white-space: normal;
+	box-shadow: 0px 0px 12px 0px silver;
+}
+
+.clubType1DataList > thead > tr > th , .clubType2DataList > thead > tr > th , .personalDataTable > thead > tr > th {
+	height: 30px;
+	background-color: #6c7ae0;
+	font-family: 'Raleway', Arial;
+	border-right: 0.5px solid #FFFFFF2e;
+	color: white;
+}
+
+.thNames {
+	padding: 0 187.5px;
+}
+
+.thLastNames {
+	padding : 0 186.5px;
+}
+
+.thRep {
+	padding: 0 49.5px;
+}
+
+.thCode {
+	padding: 0 9px;
+}
+
+.clubType1DataList > tbody , .clubType2DataList > tbody {
+	border-radius: 10px;
+}
+
+/*
+.clubType1DataList > tbody > tr {
+	height: 30px;
+} */
+
+.rowHigh, .spaceRow {
+	background-color: #F8F6FF;
+	height: 30px;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+}
+
+.rowWhite {
+	background-color: white;
+	height: 30px;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+}
+
+.rowHigh:hover , .rowWhite:hover {
+	background-color: rgba(18, 214, 61, 0.18);
+}
+
+.stName, .stLastName, .stAge, .stRep , .stPosition {
+	font-family: 'Raleway', Arial;
+	font-size: 1.4rem;
+	color: #000000ab;
+	border-left: 1px solid transparent;
+}
+
+.stPosition {
+	font-weight: bold;
+	text-align: center;
+}
+
+.stName , .stLastName {
+	width: 35%;
+}
+
+.stAge {
+	width: 2.5%;
+	font-family: Lato;
+	text-align: center;
+}
+
+.stRep {
+	width: 15%;
+	text-align: center
+}
+
+.stCode {
+	text-align: center;
+	font-family: Lato;
+	font-size: 1.3rem;
+	color: #000000ab;
+}
+
+
+/* Add data Container Styles */
+
+#addDataContainer {
+	display: none;
+	width: 40%;
+	height: 40%;
+	min-width: 481.594px;
+	min-height: 309.188px;
+	background-color: whitesmoke;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -15% 0 0 -20%;
+	text-align: center;
+	border-radius: 10px;
+	border: 1px solid #8080805e;
+}
+
+#addDataContainer > p {
+	display: inline-block;
+	font-family: 'Raleway', Arial;
+	font-size: 1.5rem;
+	color: #000C;
+	margin-top: 1%;
+}
+
+#closeMenu , .closeDeletePrompt , .closeMovePrompt {
+	display: inline-block;
+    width: 4%;
+    height: 7%;
+    border: none;
+    left: 98%;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+}
+
+#closeMenu {
+	margin-top: -2%;
+	opacity: 0.9;
+	background-image: url('../recursos/imagenes/kerygma/close.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.closeDeletePrompt , .closeMovePrompt {
+	opacity: 0.9;
+	width: 5%;
+    height: 10%;
+    margin-top: -2%;
+    text-align: center;
+    background-image: url('../recursos/imagenes/kerygma/close.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.closeMovePrompt {
+	width: 6%;
+	height:  8%;
+}
+
+#addDataContainer > div {
+	width: 65%;
+	height: 65%;
+	background-color: transparent;
+	margin: 6% auto 0 auto;
+}
+
+.addDataButtons {
+	display: inline-block;
+	background-color: transparent;
+	width: 49%;
+	height: 50%;
+	font-family: 'Raleway', Arial;
+	font-size: 1.2rem;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.addDataButtons > img {
+	margin-top: 5%;
+}
+
+.addDataButtons:hover {
+	background-color: #8080801A;
+}
+
+/* Form styles */
+
+#st-Panel-Form {
+	display: none;
+	text-align: left;
+	margin: -58% 0 0 2%;
+}
+
+#st-Panel-Form > h2 {
+	display: inline-block;
+    font-family: 'Raleway', Arial;
+    font-weight: normal;
+    font-size: 1.3rem;
+    margin-right: 1%;
+}
+
+#st-Panel-Form  > label {
+	display: inline-block;
+	font-family: 'Raleway', Arial;
+}
+
+label[for=Lastnames] , label[for="Rep"] , label[for="CI"] , label[for="spouse"]{
+	margin-left: 34%;
+}
+
+label[for=Birthday] , label[for=Age], label[for=Sex] , label[for=address], label[for=Rep] , label[for="phone"] , label[for="CI"] , label[for="spouse"] {
+	margin-top: 4%;
+}
+
+label[for=Age] {
+	margin-left: 7.5%;
+}
+
+label[for=Sex] {
+	margin-left: 5%;
+}
+
+#st-Panel-Form  > p:nth-child(2) {
+	margin-left: 40%;
+}
+
+#st-Panel-Form > input {
+	display: inline-block;
+	margin-top: 1%;
+	font-family: Lato, Arial;
+	text-transform: capitalize;
+	color: #000000ba;
+}
+
+#st-Panel-Form > select > option , #st-Panel-Form > select {
+	font-family: Lato, Arial;
+	font-size: 1.2rem;
+	color: #000000ba;
+}
+
+input[name=Names] , input[name=Lastnames] , input[name="address"] , input[name="Rep"] , input[name="phone"] , input[name="CI"] {
+	width: 40%;
+}
+
+input[name=Lastnames] , select[name="Sex"] , input[name="Rep"] , input[name="CI"], select[name="spouse"] {
+	margin-left: 2%;
+}
+
+input[name="Age"] {
+	margin-left: 2%;
+	width: 7.5%;
+}
+
+#st-Panel-Form-Btn {
+	display: block;
+	width: 12%;
+	min-height: 2.4em;
+	margin: 4% auto;
+    border:1px solid #32921f;
+    border-radius: 2px;
+    background-color: #60b750;
+    box-shadow: inset 0 1px 0 #6bde31;
+    box-sizing: border-box;
+    color: #FFF;
+    transition: all .1s ease-in;
+    touch-action: manipulation;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Raleway' , Lato , Arial;
+    font-weight: 400;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#formErrorMsg , .transFailNote {
+	display: none;
+	color: red;
+	font-family: 'Raleway', 'Arial';
+	font-size: 120%;
+}
+
+#st-Panel-Form-Success {
+	display: none;
+	width: 80%;
+    height: 100%;
+    margin-top: -50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#st-Panel-Form-Success {
+	display: none;
+}
+
+#successText {
+	font-family: 'Raleway', Arial;
+	font-size: 1.4rem;
+}
+
+#successNote {
+	font-family: 'Raleway', Arial;
+	font-size: 1.2rem;
+	font-style: italic;
+}
+
+/* Remove, edit, and transfer students dialogs */
+
+.deletePrompt , .movePrompt {
+	display: none;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    background-color: white;
+    box-shadow: 0 0 3px 1px silver;
+    height: 30%;
+    width: 40%;
+    z-index: 0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.movePrompt {
+	height: 45%;
+    width: 40%;
+}
+
+.deletePrompt > p {
+	font-family: 'Raleway', Arial;
+	font-weight: bold;
+	font-size: 1.25rem;
+	display: inline-block;
+}
+
+.movePrompt > p {
+	font-family: 'Raleway', Arial;
+	font-size: 1.2rem;
+	display: inline-block;
+}
+
+.selectedItemsContainer {
+	margin: 1% auto 0 auto;
+	height: 50%;
+	width: 60%;
+	background-color: transparent;
+	overflow-y: auto;
+}
+
+.movePrompt > .selectedItemsContainer {
+	height: 40%;
+	width: 50%;
+	border: 1px dashed black;
+}
+
+.selectedItemsContainer > ul  {
+	display: block;
+	margin: 1.5% auto 0 auto;
+	text-align: left;
+	font-family: 'Lato', Arial;
+	font-size: 130%;
+	color: #555457;
+}
+
+.dialogAction  {
+	width: 20%;
+	height: 8%;
+	font-family: 'Raleway', Arial;
+	font-size: 100%;
+	background-color: #ff00008f;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+#checkTransferSuccess {
+	height: 4%;
+	background-color: #00800075;
+}
+
+.dialogAction {
+	background-color: red;
+}
+
+.transferReqKeys {
+	display: none;
+	border: 1px dashed black;
+    margin: 0 auto;
+    width: 90%;
+    height: 60%;
+    text-align: left;
+    font-family: 'Raleway' , Lato , Arial;
+}
+
+.transferReqKeys > p {
+	text-align: center;
+	font-weight: bold;
+	font-size: 110%;
+}
+
+.transferReqKeys > span {
+	font-size: 120%;
+}
+
+.transferReqKeys > input  {
+	margin: 2% 0 2% 5%;
+    width: 30%;
+    font-family: Lato , Arial;
+}
+
+.transferReqKeys > select {
+	margin: 2% 0 2% 5%;
+    width: 30%;
+    font-family: 'Raleway' , Lato , Arial;
+    height: 8%;
+}
+
+
+.deleteSuccess , .transferSuccess {
+	display: none;
+	width: 99%;
+	height: 99%;
+	background-color: transparent;
+	text-align: center;
+}
+
+.deleteSuccess > img , .transferSuccess > img {
+	margin: 4.5% auto 0 auto;
+	width: 30%;
+	height: 55%;
+}
+
+.deleteSuccess > p , .transferSuccess > p {
+	font-family: 'Raleway' , Lato , Arial;
+	font-size: 1.3rem;
+}
+
+#completeName {
+	display: inline-block;
+	font-size: 140%;
+	font-family : 'Raleway' , Lato , Arial;
+	font-weight: bold;
+	margin: 1% 0 1% 1%;
+}
+
+#completeNameText {
+	display: inline-block;
+	font-size: 140%;
+	font-family : 'Raleway' , Lato , Arial;
+	margin: 1% 0;
+}
+
+#itemTypeIcons {
+	width: 10%;
+	height: 3%;
+	margin: 0 0 0 5.5%;
+	border: 1px solid black;
+	text-align: center;
+}
+
+.itemTypeIcons {
+	display: inline-block;
+    width: 20%;
+    height: 99%;
+   	background-size: 100% 100%; 
+}
+
+#teacherItem {
+	background: transparent url("../recursos/imagenes/Kerygma/papyrus.png") no-repeat center center;
+	background-size : 100% 100%;
+}
+
+#studentItem {
+	background: transparent url("../recursos/imagenes/Kerygma/papyrusWhite.png") no-repeat center center;
+	background-size : 100% 100%;
+}
+
+#directiveItem {
+	background: transparent url("../recursos/imagenes/Kerygma/feather.png") no-repeat center center;
+	background-size : 100% 100%;
+}
+
+#itemType {
+	display: inline-block;
+	font-size: 150%;
+	font-family: 'Muli' , 'Raleway' , Lato , Arial;
+	font-weight: bold;
+	color: #585454;
+	margin: 0 0 0 35%;
+	float: right;
+	margin: 1%;
+}
+
+#contactInfo {
+	width: 100%;
+	height: 20%;
+	margin-top: 6.5%;
+	border: 1px solid black;
+}
+
+#contactInfo > img , #contactInfo > p {
+	display: inline-block;
+    margin-top: 0.5%;
+    vertical-align: top;
+    margin-left: 1%;
+}
+
+#contactInfo > p {
+	font-family: Lato;
+    font-weight: bold;
+    font-size: 110%;
+    margin: 1% 0 0 0;
+}
+
+.dataButtons {
+	display: inline-block;
+    width: 12%;
+    min-height: 2.4em;
+    margin: 1%;
+    border: 1px solid #174e75;
+    border-radius: 2px;
+    background-color: #415dbf;
+    box-shadow: inset 0 1px 0 #5697da;
+    box-sizing: border-box;
+    color: #FFF;
+    transition: all .1s ease-in;
+    touch-action: manipulation;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Raleway' , Lato , Arial;
+    font-size: 120%;
+    font-weight: 400;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#editDataBtn {
+	display: block;
+	margin: 2% auto;
+	background-color: brown;
+	box-shadow: inset 0 1px 0 red;
+}
+
+.dataButtons:hover {
+	background-color: #30489c ;
+}
+
+#editDataBtn:hover {
+	background-color: #8c2a2a ;
+}
+
+/* "See item data" data styles */
+
+.personalDataContainer > ul {
+	display: inline-block;
+	vertical-align: top;
+	list-style: none;
+	list-style-type: none
+}
+
+#dataKeys {
+	margin-left: -5%;
+}
+
+#dataValues {
+	margin-left: -2.5%;
+}
+
+#dataKeys > li , #dataValues > li {
+	text-align: left;
+	font-family: 'Raleway' , Lato , Arial;
+	font-size: 160%;
+	border: none;
+}
+
+#dataKeys > li {
+	color: black;
+}
+
+#dataValues > li {
+	color: #333030;
+}
+
+#dataKeys > li > p {
+	text-align: right;
+}
+
+#dataValues > li > p {
+	text-align: left;
+}
+
+#dataFieldsContainer {
+	width: 100%;
+	height: 50%;
+	margin: 0 auto;
+	display: none;
+	text-align: center;
+}
+
+.field {
+	display: inline-block;
+	width: 30%;
+	height: 5%;
+	margin: 2% 0;
+}
+
+.fieldName {
+	margin: 0 2% 1% 0;
+	font-family: 'Raleway' , Lato , Arial;
+}
+
+.fieldVal {
+	color: gray;
+	font-family: Lato , Arial;
+	text-transform: capitalize;
+}
+
+.fieldName , .fieldVal {
+	display: inline-block;
+	font-size: 140%;
+	color: black;
+	vertical-align: middle;
+}
+
+.fieldVal {
+	font-size: 125%;
+}
+
+input[name="Nombres"]::before {
+	content: 'Nombres';
+}
+
+
+#updateDataSuccess , #updateDataFail {
+	display: none;
+	width: 100%;
+    height: 10%;
+    background-color: #1abf1a;
+    font-size: 120%;
+    color: white;
+    line-height: 23px;
+    font-family: 'Raleway' , Lato , Arial;
+}
+
+#updateDataFail {
+	background-color: #bd2626e8;
+}
+
+#saveChanges , #cancelChanges {
+	display: inline-block;
+}
+
+#saveChanges {
+	background-color: #14a914;
+    border: 1px solid green;
+    font-size: 110%;
+    box-shadow: inset 0 1px 0 #28de28;
+}
+
+#saveChanges:hover {
+	background-color: #1b901b; 
+}
+
+#cancelChanges {
+	font-size: 110%;
+	background-color: brown;
+	box-shadow: inset 0 1px 0 red;
+}
+
+#calcelChanges:hover {
+	background-color: #711717; 
+}
+
+/* Search styles */
+
+#searchItemContainer {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -20% 0 0 -22%;
+	width: 50%;
+	height: 50%;
+	min-width: 658.5px;
+	min-height: 348.5px;
+	display: none;
+	background-color: white;
+	box-shadow: 1px 1px 20px 2px silver;
+	border-radius: 10px;
+	text-align: center;
+	overflow-y: visible;
+}
+
+#searchBarContainer {
+	border: 1px solid black;
+	width: 100%;
+	height: 20%;
+	margin: 0 auto;
+}
+
+#searchBar {
+	border-radius: 30px;
+    background-color: #14D4F4;
+    width: 0%;
+    margin: 1% auto 0 auto;
+    height: 38%;
+}
+
+#searchBtn {
+	display: inline-block;
+    height: 75%;
+    margin: 0.5% 0 0 2.5%;
+    background-size: 100% 100%;
+    background-image: url(../recursos/imagenes/Kerygma/searchWhite.png);
+    background-repeat: no-repeat;
+    vertical-align: top;
+    width: 3.5%;
+    cursor: pointer;
+}
+
+#searchBar > p {
+	font-family: 'Raleway' , Lato , Arial;
+	font-size: 110%;
+	color: white;
+	overflow: hidden;
+}
+
+#searchInput {
+	display: inline-block;
+	width: 90%;
+	font-family: 'Raleway' , Lato , Arial;
+	color: white;
+	font-size: 125%;
+	background: none;
+	border: none;
+	margin: 1% 0 1% 2%;
+}
+
+#searchInput:focus {
+	outline: 0;
+}
+
+#searchInput::placeholder {
+	font-family: 'Raleway';
+	color: white;
+}
+
+#searchOptions {
+	width: 100%;
+    height: 30%;
+    margin: 1% auto 0 auto;
+    border: 1px solid red;
+    text-align: center;
+}
+
+#searchBy {
+	display: inline-block;
+	border: 1px solid blue;
+	height: 100%;
+	width: 30%;
+}
+
+#searchBy > p {
+	margin: 0;
+	font-weight: bold;
+	font-size: 110%;
+	color: #3e3838;
+} 
+
+#searchBy > p , #searchBy > select {
+	display: inline-block;
+	font-family: 'Raleway' , Lato , Arial;
+}
+
+#searchBy > select {
+	font-family: 100%;
+}
+
+#searchResultsContainer {
+	border: none;
+	width: 100%;
+	height: 75%;
+	text-align: left;
+}
+
+#searchResultsContainer > ul {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	list-style-type: none;
+	overflow-y: auto;
+}
+
+#searchItemContainer > p {
+	display: inline-block;
+	font-family: 'Raleway' , Lato , Arial;
+	font-size: 155%;
+	font-weight: bold;
+	color: #3e3838;
+	margin: 0;
+	text-align: center;
+}
+
+/* Result wrapper styles */
+
+.resultWrapper {
+	width: 100%;
+	height: 20%;
+	cursor: pointer;
+	/* border: 1px dashed black; */
+}
+
+.searchResult {
+	width: 100%;
+	height: 100%;
+	background: whitesmoke;
+	border-bottom: 0.5px solid black;
+}
+
+.resultTypeIcon {
+	display: inline-block;
+	margin: auto 0;
+	height: 99%;
+	width: 10%;
+	border: 1px solid blue;
+	vertical-align: top;
+}
+
+.resultTypeIcon > img {
+	display: block;
+	margin: 10.5% auto 0 auto;
+	width: 65%;
+	height: 80%;
+	border: 1px solid gray;
+	border-radius: 50%;
+}
+
+.resultDetails {
+	display: inline-block;
+	margin: auto 0;
+	width: 75%;
+	height: 99%;
+	border: 1px solid red;
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+.resultTitle {
+	display: inline-block;
+	width: 80%;
+	height: 30%;
+	margin: 1% 2%;
+	font-family: 'Raleway' , Lato , Arial;
+	font-size: 125%;
+	font-weight: bold;
+	border-right: 0.5px solid #80808073;
+	vertical-align: top;
+}
+
+.genderIcon {
+	display: inline-block;
+	width: 3% ;
+	height: 25%;
+	margin: 1% 0 0 10%;
+	border: none;
+	vertical-align: top;
+}
+
+.genderIcon > img {
+	width: 100%;
+	height: 100%;
+}
+
+.resultDataKey , .resultData {
+	display: inline-block;
+	font-family: Lato , Arial;
+	font-size: 95%;
+	font-weight: bold;
+	color: black;
+}
+
+.resultDataKey > p:nth-of-type(1) {
+	color: green;
+	font-weight: bold;
+}
+
+.resultData {
+	color: gray;
+}
+
+.resultTable {
+	display: inline-block;
+	width: 12%;
+	height: 99%;
+	margin: auto 0 auto 1%;
+	border: 1px solid blue;
+}
+
+.resultTableIcon {
+	width: 65%;
+	margin-left: 30%;
+	border: 1px solid purple;
+	background-color: #e04931;
+	border-radius: 50%;
+	text-align: center;
+	font-family: Muli;
+	font-size: 110%;
+	font-weight: bold;
+	color: white;
+}
+
+.resultTableIcon > p {
+	margin-top: 35%;
+}
+
+.noSearchResults {
+    text-align: center;
+    font-size: 150%;
+    font-weight: bold;
+    font-family: Lato;
+    color: gray;
+}
+
+#closeSearch {
+	display: inline-block;
+	vertical-align: top;
+	boder: 0.4px solid black;
+	width: 5%;
+	height: 5%;
+	float: right;
+	opacity: 0.9;
+}
+
+#closeSearch > img {
+	width: 80%;
+    height: 140%;
+    margin: -20% 0 0 50%;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+/* Hover effect for close buttons */
+#closeSearch > img:hover , #closeMenu:hover , .closeDeletePrompt:hover , .closeMovePrompt:hover { 
+	opacity: 1;
+	transition: opacity 0.2s ease-in-out;
+}
+
+/* Media queries */
+
+@media only screen and (max-height: 831px) {
+	.clubIcons {
+		line-height: 250%;
+	}
+}
+
+@media only screen and (max-height: 657px) {
+	.info {
+		height: 23.5%;
+	}
+}
