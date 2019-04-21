@@ -1606,15 +1606,74 @@ input[name="Nombres"]::before {
 }
 
 /* Media queries */
+@media only screen and (max-width: 1370px) and (max-height: 658px) {
+	#superiorHeader {
+		margin-left: 1.5%;
+	}
+	
+	#panelMin {
+		width: 3%;
+	}
+	
+	#generalResume {
+		height: 45%;
+	}
+	
+	.resumeBoxes {
+		height: 85%;
+	}
+	
+	.returnBtn {
+		height: 5.7%;
+	}
+	
+	.info {
+		height: 23.5%;
+	}
+	
+	.movePrompt {
+		height: 60%;
+	}
+	
+	.deletePrompt {
+		height: 40%;
+	}
+	
+	.closeDeletePrompt , .closeMovePrompt {
+		height: 8.5%;
+	}
+	
+	#teacherItem , #studentItem {
+		width: 18%;
+	}
+	
+	.addDataButtons {
+		height: 53.5%;
+	}
+	
+	#formErrorMsg {
+		font-size: 110%;
+	}
+	
+	#searchBtn {
+		width: 3%;
+	}
+	
+	#searchInput {
+		margin-top: 0.7%;
+	}
+	
+	.resultTypeIcon {
+		width: 9%;
+	}
+	
+	.resultTableIcon {
+		width: 60%;
+	}
+}
 
 @media only screen and (max-height: 831px) {
 	.clubIcons {
 		line-height: 250%;
-	}
-}
-
-@media only screen and (max-height: 657px) {
-	.info {
-		height: 23.5%;
 	}
 }
