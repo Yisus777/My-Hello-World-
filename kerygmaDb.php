@@ -4,7 +4,7 @@
 	
 	$server = 'localhost'; //Server name
 	$user = 'root'; //User
-	$password = '12345'; //Pass
+	$password = ''; //Pass
 	$db = 'kerygma'; //Database
 
 	$conn = new mysqli($server, $user, $password, $db); //Connect
@@ -132,7 +132,7 @@ function checkRepeatedId ($id , $conn ) {
 				echo json_encode($resultArray, JSON_HEX_APOS);
 				$conn -> close();
 		}
-		else if ($_POST['clubName'] === 'Juan' ||  $_POST['clubName'] === 'Josué' || $_POST['clubName'] === 'Job' || $_POST['clubName'] === 'Daniel' ||  $_POST['clubName'] === 'Timoteo' || $_POST['clubName'] === 'Noé') {
+		else if ($_POST['clubName'] === 'Juan' ||  $_POST['clubName'] === 'Gamaliel' || $_POST['clubName'] === 'Josué' || $_POST['clubName'] === 'Job' || $_POST['clubName'] === 'Daniel' ||  $_POST['clubName'] === 'Timoteo' || $_POST['clubName'] === 'Noé') {
 						// //
 			$club = 'tabla_' . mb_strtolower($_POST['clubName'], 'UTF-8');
 			$sql = 'SELECT Nombres, Apellidos, Edad, CI FROM ' . $club . ' ORDER BY Nombres';
@@ -322,7 +322,7 @@ if ( isset($_POST['addSt']) ) {
 				/* End of check Code */
 
 			}
-			else if ( $_POST['addSt'] == 'JS' || $_POST['addSt'] == 'JN' || $_POST['addSt'] == 'JB' || $_POST['addSt'] == 'DN' || $_POST['addSt'] == 'T' || $_POST['addSt'] == 'N') { /* Checks repeated CI's in database */
+			else if ( $_POST['addSt'] == 'JS' || $_POST['addSt'] == 'JN' || $_POST['addSt'] == 'G' || $_POST['addSt'] == 'JB' || $_POST['addSt'] == 'DN' || $_POST['addSt'] == 'T' || $_POST['addSt'] == 'N') { /* Checks repeated CI's in database */
 				$stCI = $_POST['dataSet']['CI'];
 
 				$preSql = 'SELECT SUM( ( SELECT COUNT(*) FROM tabla_david WHERE Código = ' . $stCI . ' ) + ( SELECT COUNT(*) FROM tabla_juan WHERE CI = ' . $stCI . ' ) + (SELECT COUNT(*) FROM tabla_josué WHERE CI = ' . $stCI . ') + (SELECT COUNT(*) FROM tabla_job WHERE CI = ' . $stCI . ') + (SELECT COUNT(*) FROM tabla_daniel WHERE CI = ' . $stCI . ') + ( SELECT COUNT(*) FROM tabla_timoteo WHERE CI = ' . $stCI . ') + ( SELECT COUNT(*) FROM tabla_josué WHERE CI = ' . $stCI . ') + ( SELECT COUNT(*) FROM tabla_noé WHERE CI = ' . $stCI . ') + ( SELECT COUNT(*) FROM tabla_directiva WHERE CI = ' . $stCI . ') ) AS "Count" ';
@@ -347,7 +347,7 @@ if ( isset($_POST['addSt']) ) {
 				
 				
 			if ($keepConn) {
-				/* Create keys and values of SQL statement*/
+				/* Get keys and values of SQL statement*/
 				$keys = '(';
 				$values = '(';
 				$i = 0;
@@ -380,7 +380,7 @@ if ( isset($_POST['addSt']) ) {
 					}
 					else {
 						$fb = 'Error añadiendo estudiante a la base de datos , intenta de nuevo o recarga la página.';
-						array_push($response, $fb, 'Done');
+						array_push($response, $fb, $sql, 'Done');
 					}
 			
 
@@ -761,13 +761,12 @@ else if ( isset($_POST['transferSt']) ) {
 	$preArr = array();
 
 	$j = 0;
-
 		forEach( $_POST['presentData'] as $key => $value ) {
 
 			$j ++;
 
 				if ( $j == count( $_POST['presentData'] ) ) {
-					$preKeys .= $value;
+					$preKeys .= $value ;
 
 					array_push($preArr , $value);
 				}
@@ -793,7 +792,6 @@ else if ( isset($_POST['transferSt']) ) {
 		foreach ($_POST['ids'] as $key => $value) {
 
 			$i ++;
-
 			if ( $i == count($_POST['ids']) ) {
 				if ( is_numeric($value) ) {
 					$ids .= $value . ')';
@@ -996,7 +994,7 @@ else if ( isset($_POST['transferSt']) ) {
 									$conn -> close();
 								}
 								else {
-									array_push($response , $insertSqlStat , true , 'WAHT HAPPENED?');
+									array_push($response , $getDataSql , true );
 									echo json_encode($response , JSON_HEX_APOS);
 									// 
 									$conn -> close();
@@ -1245,20 +1243,15 @@ else if ( isset( $_POST['searchData'] ) ) { // Search data
 		}
 }
 else if ( isset( $_POST['updateAges'] ) ) {
-
 	// Get club table names //
 	$getTablesSql = ' SELECT table_name FROM information_schema.tables WHERE table_schema = "kerygma" '; 
 	$getTablesQuery = $conn -> query($getTablesSql);
 	$tables = array();
-
 		if ( $getTablesQuery )  {
-
 			while( $row = $getTablesQuery -> fetch_assoc() ) {
 				array_push( $tables , $row['table_name'] );
 			}
-
 		}
-
 	foreach ($tables as $key => $value) {
 		$updateAgesSql = 'UPDATE ' . $value . 
 				' SET Edad = CASE
@@ -1267,16 +1260,12 @@ else if ( isset( $_POST['updateAges'] ) ) {
             		ELSE YEAR(CURRENT_DATE) - YEAR(FechaDeNacimiento) -1
            			 END ';
          $updateAges = $conn -> query($updateAgesSql);
-
          $updatedAgesCount = 0;
          
          if ( $updateAgesSql ) {
          	while ( $row = $updateAges -> fetch_assoc() ) {
-
          	}
          }	
-
-
 	}
 }
 
