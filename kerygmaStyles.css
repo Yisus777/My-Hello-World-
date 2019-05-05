@@ -614,9 +614,21 @@ body {
 	border: none;
 	font-family: 'Raleway' , Lato , Arial;
 	font-size: 130%;
-	text-transform: capitalize;
 }
 
+.findInTableContainer > div {
+	display: inline-block;
+	width: 5%;
+	height: 100%;
+	margin-left: 2.5%;
+	background: transparent url('../recursos/imagenes/Kerygma/searchBlack.png') no-repeat center center;
+	background-size: 100% 100%;
+	vertical-align: top;
+}
+
+.findInTableContainer:active {
+	border: 1px solid gray;
+}
 
 .findInTableContainer > input:focus {
 	outline: 0;
@@ -626,7 +638,7 @@ body {
 	width: 99%;
 	height: 70%;
 	margin: 1% auto;
-	overflow: auto;
+	overflow: hidden;
 }
 
 #itemDataContainer > .data {
@@ -703,18 +715,16 @@ body {
 	height: 30px;
 } */
 
-.rowHigh, .spaceRow {
+.rowHigh, .spaceRow{
 	background-color: #F8F6FF;
 	height: 30px;
 	cursor: pointer;
-	transition: background-color 0.2s ease-in-out;
 }
 
 .rowWhite {
 	background-color: white;
 	height: 30px;
 	cursor: pointer;
-	transition: background-color 0.2s ease-in-out;
 }
 
 .rowHigh:hover , .rowWhite:hover {
@@ -1643,8 +1653,20 @@ input[name="Nombres"]::before {
 		height: 8.5%;
 	}
 	
+	#clubType1 > .data , #personalTale > .data {
+		height: 65%;
+	}
+	
+	#clubType2 > .data {
+		height: 60%;
+	}
+	
 	#teacherItem , #studentItem {
 		width: 18%;
+	}
+	
+	.personalDataContainer {
+		height: 79%;
 	}
 	
 	.addDataButtons {
