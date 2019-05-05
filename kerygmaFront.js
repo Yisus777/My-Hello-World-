@@ -724,6 +724,7 @@ function getClubResume(clubName, infoContainer) {
 					infoContainer.children('.infoTotalStudents').text(' ' + parsedResponse.Total);
 					infoContainer.children('.infoTotalMen').text(' ' + parsedResponse.Men);
 					infoContainer.children('.infoTotalWomen').text(' ' + parsedResponse.Women);
+					infoContainer.children('.infoAges').text(' ' + parsedResponse.minimumAge + ' a ' + parsedResponse.maxAge + ' años');
 					infoContainer.children('.infoTeachers').text(' ' + parsedResponse.Teachers);
 			},
 			error : function (response) {
