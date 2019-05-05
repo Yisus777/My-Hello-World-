@@ -4,7 +4,7 @@
 // Server and DB info//
 $server = 'localhost';
 $user = 'root';
-$password = '12345';
+$password = '';
 $db = 'kerygma'; //Database Name
 
 $conn = new mysqli($server, $user, $password, $db); //Connect
@@ -18,11 +18,8 @@ $conn -> set_charset('utf8'); //Allow spanish accents in query
 
 if ( isset( $_POST['updateAges'] ) ) {
 	$sql = 'SELECT NombreDeTabla FROM info';
-
 	$firstQuery = $conn -> query($sql);
-
 	$tables = array();
-
 		if ($firstQuery) {
 			while ($row = $firstQuery -> fetch_assoc()) {
 				array_push($tables , $row['NombreDeTabla']);
@@ -47,7 +44,7 @@ if ( isset( $_POST['getHomeData'] ) ) {
 			$conn -> close();
 		}
 }
-else if ( isset( $_POST['cbNameMin'] ) ) { //Get teacers of selected club in the teacher's resume box.
+else if ( isset( $_POST['cbNameMin'] ) ) { //Get teachers of selected club in the teacher's resume box.
 	$sql = 'SELECT Nombres, Apellidos FROM tabla_mentores WHERE Club = ' . '"' . $_POST['cbNameMin'] . '"';
 	$result = $conn -> query($sql); //Output
 	$resultArray = array();
@@ -64,9 +61,9 @@ else if ( isset( $_POST['cbNameMin'] ) ) { //Get teacers of selected club in the
 } 
 else if (isset( $_POST['clubName'] ) ) {// To get club resume in menú //{
 	$club = 'tabla_' . mb_strtolower($_POST['clubName'], 'UTF-8');
-	$sql = "SELECT (SELECT COUNT(*) FROM " . $club . ") AS 'Total',  (SELECT COUNT(*) FROM " . $club .  " WHERE Sexo = 'Masculino') AS 'Men', (SELECT COUNT(*) FROM " . $club . " WHERE Sexo = 'Femenino') AS 'Women', (SELECT GROUP_CONCAT(Nombres, ' ', Apellidos) FROM tabla_mentores WHERE Club = " . "'" . mb_strtolower($_POST['clubName'], 'UTF-8') . "'" . ") AS 'Teachers'";
+	$sql = "SELECT (SELECT COUNT(*) FROM " . $club . ") AS 'Total',  (SELECT COUNT(*) FROM " . $club .  " WHERE Sexo = 'Masculino') AS 'Men', (SELECT COUNT(*) FROM " . $club . " WHERE Sexo = 'Femenino') AS 'Women', (SELECT GROUP_CONCAT(Nombres, ' ', Apellidos) FROM tabla_mentores WHERE Club = " . "'" . mb_strtolower($_POST['clubName'], 'UTF-8') . "'" . ") AS 'Teachers', (SELECT EdadMiníma FROM info WHERE NombreDeTabla = '" . $club . "') AS 'minimumAge' , (SELECT EdadMáxima FROM info WHERE NombreDeTabla = '" . $club . "') AS 'maxAge'";
 	$result = $conn -> query($sql); //Output
-	$preObj = array('Total' => 'Sin datos', 'Men' => 'Sin datos', 'Women' => 'Sin datos', 'Teachers' => 'Sin datos');
+	$preObj = array('Total' => 'Sin datos', 'Men' => 'Sin datos', 'Women' => 'Sin datos', 'Teachers' => 'Sin datos', 'minimumAge' => 'Sin Datos', 'maxAge' => 'Sin datos');
 		if ($result) {
 			while ( $row = $result -> fetch_assoc())  {
 				forEach( $preObj as $key => $value ) {
