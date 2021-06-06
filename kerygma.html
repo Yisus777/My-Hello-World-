@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+
+<html>
+	<head> 
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Jesús Palmera" />
+		<meta name="Owner" content="Centro Cristiano Mizpa" />
+		<meta http-equiv="Content-type" content="text/html" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<title> Kerygma </title>
+		<link rel="stylesheet" type="text/css" href="../CSS/kerygmaStyles.css" />
+		<link rel="icon" href="../recursos/imagenes/Kerygma/ag.png">
+		
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+		<link href="../recursos/fonts/CSS/LatoFont.css" rel="stylesheet">
+		<link href="../recursos/fonts/CSS/RalewayFont.css" rel="stylesheet">
+
+	</head>
+		<body>
+			<div id="panelMin"> <!-- Buttons left panel Min -->
+				<div id="buttonsContainer">
+					<button id="collapseButton" title="Expandir Menú"> </button>
+					<button class="optionsButtons" id="showGeneral" title="Mostrar Datos Generales"> </button>
+					<button class="optionsButtons" id="showStudents" title="Mostrar Clubes y Estudiantes"> </button>
+					<button class="optionsButtons" id="searchData" title="Buscar Estudiantes/Mentores"> </button>
+					<button class="optionsButtons" id="viewHelp" title="Ayuda"> </button>
+				</div>
+			</div>
+			<div id="superiorHeader">
+				<p> KER<span style="color:red;">Y</span>GMA <span style="color: #500C0C;"> לבלר  </span> </p>
+			</div>
+			<div id="generalResume" class="home">
+				<p> Resumen General </p>
+			
+				<div class="resumeBoxes" id="studentsResume"> <!-- Students Resume -->
+					<div class="boxTitle"> 
+						<p> Estudiantes </p>
+						<img src="../recursos/imagenes/Kerygma/studentGirl.png" class="boxesIcons" /> 
+					</div>
+					
+					<div class="innerData">
+
+						<span> Matricula Total: </span><p id="totalStudents"> 19 </p> <span style="margin-left: 18%; color: green"> V: </span> <p id="totalMen"> 9 </p> <span style="color: #E98092"> H: </span> <p id="totalWomen"> 10</p>
+
+						<br>
+
+						<span style="margin: 0 0 0 25%"> Matrícula Por Club: </span> <br>
+
+						<div id="smallClubsContStudents">
+						</div>
+						
+					</div>
+				</div>
+				<div class="resumeBoxes" id="teachersResume">
+					<div class="boxTitle">
+						<p> Maestros </p>
+						<img src="../recursos/imagenes/Kerygma/professor.png" class="boxesIcons" />
+					</div>
+					
+					<div class="innerData">
+						<span> Maestros Totales: </span><p id="totalTeachers"> 18 </p> <span style="margin-left: 18%; color: green"> V: </span> <p id="totalMen"> 9 </p> <span style="color: #E98092"> H: </span> <p id="totalWomen"> 9 </p><br>
+						<span style="margin: 0 0 0 25%"> Maestros Por Club: </span> <br>
+
+						<div id="smallClubsCont">
+							<div class="circle smallClubsIcons minBaseIcon" title="Jesus" hidden> <span> ∞ </span> </div>
+
+							<!--
+							<div class="circle smallClubsIcons" title="Moises" onclick="showTeachersMin(this)"> <span> M </span></div>
+							<div class="circle smallClubsIcons" title="Samuel" onclick="showTeachersMin(this)"> <span> S </span></div>
+							<div class="circle smallClubsIcons" title="Jóse" onclick="showTeachersMin(this)"> <span> J </span></div>
+							<div class="circle smallClubsIcons" title="David" onclick="showTeachersMin(this)"> <span> D </span></div>
+							<div class="circle smallClubsIcons" title="Juan" onclick="showTeachersMin(this)"> <span> JN </span></div>
+							<div class="circle smallClubsIcons" title="Josué" onclick="showTeachersMin(this)"> <span> JS </span></div>
+							<div class="circle smallClubsIcons" title="Job" onclick="showTeachersMin(this)"> <span> JB </span></div>
+							<div class="circle smallClubsIcons" title="Daniel" onclick="showTeachersMin(this)"> <span> DN </span></div>
+							<div class="circle smallClubsIcons" title="Timoteo" onclick="showTeachersMin(this)"> <span> T </span></div>
+							<div class="circle smallClubsIcons" title="Noé" onclick="showTeachersMin(this)"> <span> N </span></div> -->
+							
+						</div>
+						<button class="viewData" id="teachersDataB" onclick="showPersonalTable('Teachers')"> Ver Mentores </button>
+					</div>
+				</div>
+				<div class="resumeBoxes" id="adminResume">
+					<div class="boxTitle"> 
+						<p> Panel Administrativo </p>
+						<img src="../recursos/imagenes/Kerygma/school.png" class="boxesIcons" />
+					</div>
+					
+					<div class="innerData">
+						<span> Personal Total: </span><p id="totalAdmins"> 6 </p> <span style="margin-left: 25%; color: green"> V: </span> <p id="totalMen"> 1 </p> <span style="color: #E98092"> H: </span> <p id="totalWomen">8</p><br>
+						<span> Personal Directivo: </span><p id="totalDirective"> 2 </p> <span> Coordinadores: </span><p id="totalCoord"> 2 </p> <br> 
+						<span> Control de estudio: </span><p id="totalControl"> 1 </p> <br>
+						<button class="viewData" id="adminDataB" onclick="showPersonalTable('Personal')"> Ver Personal </button>
+					</div>		
+					
+				</div>
+				<div class="resumeBoxes" id="academicResume"> 
+					<div class="boxTitle"> 
+						<p> Academico </p>
+						<img src="../recursos/imagenes/Kerygma/book.png" class="boxesIcons" />
+					</div>
+					
+					<div class="noData">
+						<img src="../recursos/imagenes/Kerygma/working.png" width="30%" height="2%" style="margin-top: 10%;"/>
+						<p style="font-family: Lato;font-size: 1.1rem; margin-top: 1%; white-space: normal;"> ¡Vaya!, parece ser que esta sección o estos datos no estan disponibles por el momento, pero tranquil@... Llegarán tan rápido como Israel a la tierra prometida. </p>
+					
+					</div>
+				</div>
+				
+				
+			</div>
+			<div id="clubsBarContainer" class="home">
+				<p> Clubes </p>
+					<div id="clubsBar" >
+						<div class="clubsIconsCont baseIcon" hidden>
+							<div class="circle clubIcons" title="Jesus"> ∞ </div><br> 
+							<p style=""> Jesus </p>
+						</div>
+						<!--
+						<div class="clubsIconsCont">
+							<div class="circle clubIcons" title="Moises" onclick="msjd(this, 'st')"> M </div><br> 
+							<p style=""> Moises </p>
+						</div>
+						<div class="clubsIconsCont">
+							<div class="circle clubIcons" title="Samuel" onclick="msjd(this, 'st')"> S </div><br> 
+							<p style=""> Samuel </p>
+						</div>
+						<div class="clubsIconsCont">
+							<div class="circle clubIcons" title="José" onclick="msjd(this, 'st')"> J </div><br> 
+							<p style=""> José </p>
+						</div>
+						<div class="clubsIconsCont"> 
+							<div class="circle clubIcons" title="David" onclick="msjd(this, 'st')"> D </div><br> 
+							<p style=""> David </p>
+						</div>
+						<div class="clubsIconsCont">
+							<div class="circle clubIcons" title="Juan" onclick="jd(this, 'st')"> JN </div><br> 
+							<p style=""> Juan </p>
+						</div>
+						<div class="clubsIconsCont"> 
+							<div class="circle clubIcons" title="Josué" onclick="jd(this, 'st')"> JS </div><br> 
+							<p style=""> Josué </p>
+						</div>
+						<div class="clubsIconsCont"> 
+							<div class="circle clubIcons" title="Job" onclick="jd(this, 'st')"> JB </div><br> 
+							<p style=""> Job </p>
+						</div>
+						<div class="clubsIconsCont">
+							<div class="circle clubIcons" title="Daniel" onclick="jd(this, 'st')"> DN </div><br> 
+							<p style=""> Daniel </p>
+						</div>
+						<div class="clubsIconsCont">
+							<div class="circle clubIcons" title="Timoteo" onclick="jd(this, 'st')"> T </div><br> 
+							<p style=""> Timoteo </p>
+						</div>
+						<div class="clubsIconsCont">
+							<div class="circle clubIcons" title="Noé" onclick="jd(this, 'st')"> N </div><br> 
+							<p style=""> Noé </p>
+						</div> -->
+					</div> 
+			</div>
+			<!-- Clubs data containers --> 
+			<div id="clubType1"> <!-- For Clubs: Moses, Samuel, Joseph and David -->
+
+				<div class="returnBtn" id="returnToGeneral"> <!-- Button to return to general resume -->
+						<img src="../recursos/imagenes/Kerygma/backIcon.png" width="70%" height="100%" title="Volver"  />
+						<p> Volver </p>
+				</div>
+
+				<h2 class="clubName"> Moises </h2>
+				<div class="icon">
+					<div class="innerClubIcon"> M </div>
+				</div>
+				<div class="info">
+					<!-- Club resume -->
+					<p class="infoTotalStudents"> 10 </p>
+					<p class="infoTotalMen"> 6 </p>
+					<p class="infoTotalWomen"> 4 </p>
+					<p class="infoAges"> 3 a 5 años</p>
+					<br>
+					<p class="infoTeachers"> Jeilin Bello, Emma Watson </p>
+					<br>
+					<!-- Options --->
+					<div class="editDataInner addStudent" onclick="addStIn()">
+						<img src="../recursos/imagenes/Kerygma/addStudent.png" width="20%" height="99%"/>
+						<p> Añadir Estudiante </p>
+					</div>
+					<div class="editDataInner" id="editStudent">
+						<img src="../recursos/imagenes/Kerygma/editStudent.png" width="18%" height="95%" />
+						<p> Editar Estudiante </p>
+					</div>
+					<div class="editDataInner removeStudent" onclick="showDialog(this)">
+						<img src="../recursos/imagenes/Kerygma/removeStudent.png" width="17.5%" height="95%" />
+						<p> Remover Estudiante </p>
+					</div>
+					<div class="editDataInner moveStudent" onclick="showDialog(this)">
+						<img src="../recursos/imagenes/Kerygma/moveStudent.png" width="17.5%" height="95%" />
+						<p> Transferir Estudiante </p>
+					</div>
+					<div class="editDataInner seeItem" onclick="seeItemData()">
+						<img src="../recursos/imagenes/Kerygma/seeInfo.png" width="17.5%" height="95%" />
+						<p> Ver Ficha </p>
+					</div>
+				 </div>
+				<div class="data">
+
+					<div class="findInTableContainer">
+						<input type="text" placeholder="Buscar en tabla..." class="findItemInTable">
+					 </div>
+
+					<table class="clubType1DataList">
+						<thead>
+							<tr> 
+								<th class="thNames"> Nombres </th>
+								<th class="thLastNames"> Apellidos </th>
+								<th class="thAge"> Edad </th>
+								<th class="thRep"> Representante </th>
+								<th class="thCode"> Código </th>
+							</tr>
+						</thead>
+						<tbody>
+							<!--
+							<tr class="spaceRow"> 
+								<td class="stName"> Jhon Doe</td>
+								<td class="stLastName"> Doe Jhon</td>
+								<td class="stAge"> 4 </td>
+								<td class="stRep"> Mary Doe</td>
+								<td class="stCode"> JD001 </td>
+							</tr>
+							<tr class="rowHigh"> 
+								<td class="stName"> Jhon Doe</td>
+								<td class="stLastName"> Doe Jhon</td>
+								<td class="stAge"> 4 </td>
+								<td class="stRep"> Mary Doe</td>
+								<td class="stCode"> JD001 </td>
+							</tr>
+							<tr class="rowWhite"> 
+								<td class="stName"> Jhon Doe</td>
+								<td class="stLastName"> Doe Jhon</td>
+								<td class="stAge"> 4 </td>
+								<td class="stRep"> Mary Doe</td>
+								<td class="stCode"> JD001 </td>
+							</tr>
+-->
+						</tbody>
+					</table>
+
+				 </div>
+
+				 <!-- Remove, edit, and transfer students dialogs -->
+
+				<div class="deletePrompt">
+
+						<p> ¿Deseas eliminar los siguientes estudiantes del club Moises? </p>
+						<button class="closeDeletePrompt" onclick="closeContainer(this)"> </button>
+						<div class="selectedItemsContainer">
+							<ul>
+							
+							</ul>
+						</div>
+						<h5 style="font-family:'Raleway',Arial;font-weight: normal;font-style: italic"> Estos cambios no se podran deshacer </h5>
+						<button class="dialogAction" onclick="deleteStIn()"> Eliminar </button>
+
+					<section class="deleteSuccess">
+						<img src="../recursos/imagenes/Kerygma/done.png">
+						<p> Estudiantes Eliminados con éxito de la base de datos. </p>
+					</section>
+				</div>
+
+				<div class="movePrompt" id="club1Trans"> 
+					<p> Estudiantes a mover: </p>
+					<button class="closeMovePrompt" onclick="closeContainer(this)">  </button>
+					<div class="selectedItemsContainer">
+						<ul>
+
+						</ul>
+					</div>
+					<p> Club Destino: </p>
+					<select class="moveStClub" name="moveStClub" style="display: block; margin: 0 auto; font-family: 'Raleway', Arial">
+						<!--
+						<option value="Moises"> Moises </option>
+						<option value="Samuel"> Samuel </option>
+						<option value="José"> José </option>
+						<option value="David"> David </option>
+						<option value="Juan"> Juan </option>
+						<option value="Josué"> Josué </option>
+						<option value="Job"> Job </option>
+						<option value="Daniel"> Daniel </option>
+						<option value="Timoteo"> Timoteo </option>
+						<option value="Noé"> Noé </option> -->
+					</select>
+					<h5 style="font-family:'Raleway',Arial;font-weight: normal;font-style: italic"> Si el estudiante ha obtenido CI y se movera a un club mayor se recomienda sustituir su código especial por su CI si se mueve al club David, y es obligatorio si avanza al club Juan en adelante. </h5>
+					<button id="checkTransferBtn" onclick="checkStTransfer(this)"> Mover </button>
+
+					<div class="transferReqKeys">
+
+						<p> Por favor, completa o confirma los siguientes campos para mover a los estudiantes: </p>
+						<!--
+						<span class="itemName"> Jhon Lennon </span> <br> 
+							<input name="transferCI" type="number" placeholder="Cédula"> <br> 
+						<span class="itemName"> Elizabeth Gilles </span> <br> 
+							<select name="transferSpouse" style="">
+								<option value="No"> No </option>
+								<option value="Cristiano"> Sí, Cristiano </option>
+								<option value="Inconverso"> Sí, Inconverso </option>
+								<option value="0" selected> ¿Cónyuge? </option>
+							</select> <br> 
+						-->
+					</div>
+
+					<section class="transferSuccess">
+						<img src="../recursos/imagenes/Kerygma/done.png">
+						<p>  </p>
+					</section>
+
+				</div>
+
+				
+
+				</div>
+
+			</div>
+			<!-- -->
+			<div id="clubType2"> <!-- For Clubs: Jhon, Joshua, Job, Daniel and Timothy -->
+
+				<div class="returnBtn" id="returnToGeneral"> <!-- Button to return to general resume -->
+						<img src="../recursos/imagenes/Kerygma/backIcon.png" width="75%" height="110%" title="Volver" />
+						<p> Volver </p>
+				</div>
+
+				<h2 class="clubName"> Moises </h2>
+				<div class="icon">
+					<div class="innerClubIcon"> M </div>
+				</div>
+				<div class="info">
+					<!-- Club resume -->
+					<p class="infoTotalStudents"> 10 </p>
+					<p class="infoTotalMen"> 6 </p>
+					<p class="infoTotalWomen"> 4 </p>
+					<p class="infoAges"> 3 a 5 años</p>
+					<br>
+					<p class="infoTeachers"> Jeilin Bello, Emma Watson </p>
+					<br>
+					<!-- Options --->
+					<div class="editDataInner addStudent" onclick="addStIn()">
+						<img src="../recursos/imagenes/Kerygma/addStudent.png" width="20%" height="99%"/>
+						<p> Añadir Estudiante </p>
+					</div>
+					<div class="editDataInner" id="editStudent">
+						<img src="../recursos/imagenes/Kerygma/editStudent.png" width="18%" height="95%" />
+						<p> Editar Estudiante </p>
+					</div>
+					<div class="editDataInner removeStudent" onclick="showDialog(this)">
+						<img src="../recursos/imagenes/Kerygma/removeStudent.png" width="17.5%" height="95%" />
+						<p> Remover Estudiante </p>
+					</div>
+					<div class="editDataInner moveStudent" onclick="showDialog(this)">
+						<img src="../recursos/imagenes/Kerygma/moveStudent.png" width="17.5%" height="95%" />
+						<p> Transferir Estudiante </p>
+					</div>
+					<div class="editDataInner seeItem" onclick="seeItemData(this)">
+						<img src="../recursos/imagenes/Kerygma/seeInfo.png" width="17.5%" height="95%" />
+						<p> Ver Ficha </p>
+					</div>
+
+				 </div>
+				 
+				 <div class="findInTableContainer">
+					<input type="text" placeholder="Buscar en tabla..." class="findItemInTable">
+				 </div>
+				 
+				<div class="data">
+					<table class="clubType2DataList">
+						<thead>
+							<tr> 
+								<th class="thNames"> Nombres </th>
+								<th class="thLastNames"> Apellidos </th>
+								<th class="thAge"> Edad </th>
+								<th class="thCode"> Cédula </th>
+							</tr>
+						</thead>
+						<tbody>
+							<!--
+							<tr class="spaceRow"> 
+								<td class="stName"> Jhon Doe</td>
+								<td class="stLastName"> Doe Jhon</td>
+								<td class="stAge"> 4 </td>
+								<td class="stCode"> JD001 </td>
+							</tr>
+							<tr class="rowHigh"> 
+								<td class="stName"> Jhon Doe</td>
+								<td class="stLastName"> Doe Jhon</td>
+								<td class="stAge"> 4 </td>
+								<td class="stCode"> JD001 </td>
+							</tr>
+							<tr class="rowWhite"> 
+								<td class="stName"> Jhon Doe</td>
+								<td class="stLastName"> Doe Jhon</td>
+								<td class="stAge"> 4 </td>
+								<td class="stCode"> JD001 </td>
+							</tr>
+						-->
+						</tbody>
+					</table>
+
+				 </div>
+
+				  <!-- Remove, edit, and transfer students dialogs -->
+
+				<div class="deletePrompt">
+
+					<p> ¿Deseas eliminar los siguientes estudiantes del club Moises? </p>
+
+					<button class="closeDeletePrompt" onclick="closeContainer(this)">  </button>
+					<div class="selectedItemsContainer">
+						<ul>
+							
+						</ul>
+					</div>
+					<h5 style="font-family:'Raleway',Arial;font-weight: normal;font-style: italic"> Estos cambios no se podran deshacer </h5>
+
+					<button class="dialogAction" onclick="deleteStIn()"> Eliminar </button>
+
+					<section class="deleteSuccess">
+						<img src="../recursos/imagenes/Kerygma/done.png">
+						<p> Estudiantes Eliminados con éxito de la base de datos. </p>
+					</section>
+
+				</div>
+
+				<div class="movePrompt"> 
+					<p> Estudiantes a mover: </p>
+					<button class="closeMovePrompt" onclick="closeContainer(this)">  </button>
+					<div class="selectedItemsContainer">
+						<ul>
+
+						</ul>
+					</div>
+					<p> Club Destino: </p>
+					<select class="moveStClub" name="moveStClub" style="display: block; margin: 0 auto; font-family: 'Raleway', Arial">
+						<!--
+						<option value="Moises"> Moises </option>
+						<option value="Samuel"> Samuel </option>
+						<option value="José"> José </option>
+						<option value="David"> David </option>
+						<option value="Juan"> Juan </option>
+						<option value="Josué"> Josué </option>
+						<option value="Job"> Job </option>
+						<option value="Daniel"> Daniel </option>
+						<option value="Timoteo"> Timoteo </option>
+						<option value="Noé"> Noé </option> -->
+					</select>
+					<h5 style="font-family:'Raleway',Arial;font-weight: normal;font-style: italic"> Si el estudiante ha obtenido CI y se movera a un club mayor se recomienda sustituir su código especial por su CI si se mueve al club David, y es obligatorio si avanza al club Juan en adelante. </h5>
+					<button class="dialogAction" onclick="checkStTransfer(this)"> Mover </button>
+
+					<div class="transferReqKeys">
+						<p> Por favor, completa los siguientes campos para mover a los estudiantes: </p>
+						<!--
+						<span class="itemName"> Jhon Lennon </span> <br> 
+							<input name="transferCI" type="number" placeholder="Cédula"> <br> 
+							<input name="transferRep" type="text" placeholder="Representante"> <br> 
+						<span class="itemName"> Elizabeth Gilles </span> <br> 
+							<select name="transferSpouse">
+								<option value="No"> No </option>
+								<option value="Cristiano"> Sí, Cristiano </option>
+								<option value="Inconverso"> Sí, Inconverso </option>
+								<option value="0" selected> ¿Cónyuge? </option>
+							</select> <br> 
+						-->
+					</div>
+
+					<section class="transferSuccess">
+						<img src="../recursos/imagenes/Kerygma/done.png">
+						<p>  </p>
+					</section>
+
+				</div>
+
+
+			</div>
+			
+			<div id="personalTable">
+
+				<div class="returnBtn" id="returnToGeneral"> <!-- Button to return to general resume -->
+					<img src="../recursos/imagenes/Kerygma/backIcon.png" width="70%" height="100%" title="Volver" />
+					<p> Volver </p>
+				</div>
+					
+				<h2 class="tableTitle"> Moises </h2>
+
+				<div class="icon">
+					<div class="innerClubIcon"> M </div>
+				</div>
+					
+				<div class="info">
+					<!-- Teachers/Personal resume -->
+					<p class="totalPersonal"> 10 </p>
+					<p class="infoTotalMen"> 6 </p>
+					<p class="infoTotalWomen"> 4 </p>
+
+					<br>
+
+					<!-- Options --->
+					<div class="editDataInner addPersonal" onclick="addTeacherIn()">
+						<img src="../recursos/imagenes/Kerygma/addStudent.png" width="20%" height="99%"/>
+						<p> Añadir Mentor </p>
+					</div>
+					<div class="editDataInner removePersonal" onclick="showDialog(this)">
+						<img src="../recursos/imagenes/Kerygma/removeStudent.png" width="17.5%" height="95%" />
+						<p> Remover Mentor </p>
+					</div>
+					<div class="editDataInner seeItem" onclick="seeItemData(this)">
+						<img src="../recursos/imagenes/Kerygma/seeInfo.png" width="17.5%" height="95%" />
+						<p> Ver Ficha </p>
+					</div>
+
+				 </div>
+
+				 <div class="data">
+
+				 	<div class="findInTableContainer">
+						<input type="text" placeholder="Buscar en tabla..." class="findItemInTable">
+					 </div>
+
+					<table class="personalDataTable">
+						<thead>
+							<tr> 
+								<th class="thNames"> Nombres </th>
+								<th class="thLastNames"> Apellidos </th>
+								<th class="thAge"> Edad </th>
+								<th class="thPosition"> Club </th>
+								<th class="thCode"> Cédula </th>
+							</tr>
+						</thead>
+						<tbody>
+							<!--
+							<tr class="spaceRow"> 
+								<td class="stName"> Jhon Doe</td>
+								<td class="stLastName"> Doe Jhon</td>
+								<td class="stAge"> 4 </td>
+								<th class="stPosition"> Samuel </th>
+								<td class="stCode"> JD001 </td>
+							</tr>
+							<tr class="rowHigh"> 
+								<td class="stName"> Jhon Doe</td>
+								<td class="stLastName"> Doe Jhon</td>
+								<td class="stAge"> 4 </td>
+								<th class="stPosition"> Moises </th>
+								<td class="stCode"> JD001 </td>
+							</tr>
+							<tr class="rowWhite"> 
+								<td class="stName"> Jhon Doe</td>
+								<td class="stLastName"> Doe Jhon</td>
+								<td class="stAge"> 4 </td>
+								<th class="stPosition"> Job </th>
+								<td class="stCode"> JD001 </td>
+							</tr>
+						-->
+						</tbody>
+					</table>
+
+				 </div>
+
+				 <div class="deletePrompt">
+
+					<p> ¿Deseas eliminar los siguientes estudiantes del club Moises? </p>
+					<button class="closeDeletePrompt" onclick="closeContainer(this)">  </button>
+					<div class="selectedItemsContainer">
+						<ul>
+							
+						</ul>
+					</div>
+					<h5 style="font-family:'Raleway',Arial;font-weight: normal;font-style: italic"> Estos cambios no se podran deshacer </h5>
+
+					<button class="dialogAction" onclick="deletePersonalIn()"> Eliminar </button>
+
+					<section class="deleteSuccess">
+						<img src="../recursos/imagenes/Kerygma/done.png">
+						<p>  </p>
+					</section>
+
+				</div>
+
+			</div>
+
+			<div id="itemDataContainer">
+
+				<div class="returnBtn" id="returnToClub"> <!-- Button to return to general resume -->
+					<img src="../recursos/imagenes/Kerygma/backIcon.png" width="75%" height="110%" title="Volver" />
+					<p> Volver </p>
+				</div>
+
+				<h2 class="clubName"> Moises </h2>
+
+				<div class="icon">
+					<div class="innerClubIcon"> M </div>
+				</div>
+
+				<div class="info">
+
+					<span id="completeName"> Nombre Completo : </span>
+					<p id="completeNameText"> Paul McCartney </p>
+
+					<p id="itemType"> ESTUDIANTE </p>
+
+					<div id="contactInfo">
+
+						<img src="../recursos/imagenes/Kerygma/address.png" width="3%" height="70%" title="Dirección"/>
+						<p id="contactAddress"> Barrio El Cementerio, Calle 5 </p>
+
+						<img src="../recursos/imagenes/Kerygma/phone.png" width="2.5%" height="70%" title="Teléfono de Contacto"/>
+						<p id="contactPhone"> 04149576749 </p>
+
+					</div>
+
+				</div>
+
+				<div id="itemTypeIcons">
+					<!--
+					<div class="itemTypeIcons" id="teacherItem" title="Este estudiante también es un mentor"> </div>
+					<div class="itemTypeIcons" id="studentItem" title="Este estudiante tambien es un estudiante"> </div>
+					<div class="itemTypeIcons" id="directiveItem" title="Este estudiante tambien forma parte del personal directivo"> </div> -->
+				</div>
+
+				<div class="data">
+					<button class="dataButtons" id="personalDataBtn" onclick="retrievePersonalData(this)"> Personal </buttn>
+					<button class="dataButtons" id="academicDataBtn" onclick="showAcademicData(this)"> Académico </button> <br> 
+
+					<div class="personalDataContainer">
+
+						<button class="dataButtons" id="editDataBtn" onclick="editPersonalData()"> Editar </button> 
+
+						<br>
+
+						<ul id="dataKeys">
+
+						</ul>
+						<ul id="dataValues">
+
+						</ul>
+
+						<div id="dataFieldsContainer">
+							<!--
+							<div class="field"> 
+								<span class="fieldName"> Nombres </span>
+								<input type="text" name="Nombres" class="fieldVal">
+							</div>
+
+
+							<div class="field">
+								<span class="fieldName"> Apellidos </span>
+								<input type="text" name="Apellidos" class="fieldVal">
+							</div>
+							
+
+							<div class="field">
+								<span class="fieldName"> Edad </span>
+								<input type="number" name="Edad" class="fieldVal">
+							</div>
+
+							<br>
+
+							<div class="field">
+								<span class="fieldName"> F.Nacimiento </span>
+								<input type="date" name="FechaDeNacimiento" data-date-format="DD-MMMM-YYYY" value="2001-07-23" class="fieldVal"> 
+							</div>
+
+							<div class="field">
+
+								<span class="fieldName"> Sexo </span>
+
+								<select name="Sexo" class="fieldVal">
+									<option value="Masculino"> Hombre </option>
+									<option value="Femenino"> Mujer </option>
+								</select>
+
+							</div>
+
+							<div class="field">
+
+								<span class="fieldName"> Dirección </span>
+								<input type="text" name="Dirección" class="fieldVal">
+								
+							</div>
+
+							<br>
+
+							<div class="field">
+
+								<span class="fieldName"> Representante </span>
+								<input type="text" name="Representante" class="fieldVal">
+								
+							</div>
+							
+							<div class="field">
+
+								<span class="fieldName"> Teléfono </span>
+								<input type="number" name="Teléfono" class="fieldVal">
+								
+							</div>
+
+							<div class="field">
+
+								<span class="fieldName"> Cédula </span>
+								<input type="number" name="CI" class="fieldVal">
+								
+							</div>
+
+							<br>
+
+							<div class="field">
+
+								<span class="fieldName"> ¿Cónyuge? </span>
+
+								<select name="Cónyuge">
+									<option value="No"> No </option>
+									<option value="Cristiano"> Sí, Cristiano </option>
+									<option value="Inconverso">  Sí, Inconverso </option>
+									<option value="0" hidden> </option>
+								</select>
+								
+							</div>
+
+							<div class="field">
+
+								<span class="fieldName"> Club </span>
+
+								<select name="Club">  For teachers 
+									<option value="M"> Moises </option>
+									<option value="S"> Samuel </option>
+									<option value="J"> José </option>
+									<option value="D"> David </option>
+									<option value="JN"> Juan </option>
+									<option value="JS"> Josué </option>
+									<option value="JB"> Job</option>
+									<option value="DN"> Daniel </option>
+									<option value="T"> Timoteo </option>
+									<option value="A"> Noé </option>
+								</select>
+								
+							</div>
+
+							<div class="field">
+
+								<span class="fieldName"> Ocupación </span>
+
+								<select name="Ocupación"> For directive personal
+									<option value="Coordinador"> Coordinador </option>
+									<option value="Directiva"> Directiva </option>
+								</select>
+								
+								
+							</div>
+						-->
+
+						<div id="updateDataFail">
+							<p>  </p>
+						</div>
+						</div>
+
+
+					</div>
+					<div class="academicDataContainer" style="border: 1px solid red;" hidden>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+			<div id="addDataContainer">
+				<p> ¿Qué deseas añadir? </p>
+				<button id="closeMenu" onclick="closeContainer(this)">  </button>
+				<div id="addDataButtonsContainer">
+					<div class="addDataButtons" id="addStudent-Panel">
+						<img src="../recursos/imagenes/Kerygma/studentBoy.png" />
+						<p> Añadir Estudiante </p>
+					</div>
+					<div class="addDataButtons" id="addTeacher-Panel"> 
+						<img src="../recursos/imagenes/Kerygma/professor.png" />
+						<p> Añadir Mentor </p>
+					</div>
+					<br>
+					<div class="addDataButtons" id="addPersonal-Panel">
+						<img src="../recursos/imagenes/Kerygma/school.png" />
+						<p> Añadir Personal </p>
+					</div>
+					<div class="addDataButtons" id="addAcademic-Panel">
+						<img src="../recursos/imagenes/Kerygma/book.png" />
+						<p> Añadir datos academicos </p>
+					</div>
+				</div>
+
+				<!-- Pre-club Selection -->
+
+				<!-- Add st form -->
+				<form id="st-Panel-Form">
+					<h2>  </h2>
+					<select name="st-Panel-Form-Club" onchange="alterForm(this.value)" hidden> <!-- For students -->
+							<option value="M"> Moises </option>
+							<option value="S"> Samuel </option>
+							<option value="J"> José </option>
+							<option value="D"> David </option>
+							<option value="JN"> Juan </option>
+							<option value="JS"> Josué </option>
+							<option value="JB"> Job</option>
+							<option value="DN"> Daniel </option>
+							<option value="T"> Timoteo </option>
+							<option value="N"> Noé </option>
+					</select> 
+					<select name="teacher-Panel-Form-Club" hidden> <!-- For teachers -->
+							<option value="M"> Moises </option>
+							<option value="S"> Samuel </option>
+							<option value="J"> José </option>
+							<option value="D"> David </option>
+							<option value="JN"> Juan </option>
+							<option value="JS"> Josué </option>
+							<option value="JB"> Job</option>
+							<option value="DN"> Daniel </option>
+							<option value="T"> Timoteo </option>
+							<option value="N"> Noé </option>
+					</select>
+					<select name="personal-Panel-Form-Position" hidden> <!-- For directive personal -->
+							<option value="Coordinador"> Coordinador </option>
+							<option value="Directiva"> Directiva </option>
+					</select>
+
+						<br>
+
+					<label for="Names"> Nombres </label>  <label for="Lastnames"> Apellidos </label> <br>
+					<input type="text" name="Names" pattern="[A-Z]{3}" required title="El nombre debe ser de 2 caracteres minímo" title="Nombres" placeholder="Nombres"> 
+					<input type="text" name="Lastnames" placeholder="Apellidos"> 
+
+						<br>
+
+					<label for="Birthday"> Fecha De Nacimiento </label>  <label for="Age"> Edad </label> <label for="Sex"> Sexo </label>
+
+						<br>
+
+					<input type="date" name="Birthday" data-date-format="DD-MMMM-YYYY" value="2001-07-23" oninput="calcAge(this.value)"> 
+					<input type="number" name="Age" min="0" max="120" widh="10%" > 
+					<select name="Sex">
+						<option value="Masculino"> Hombre </option>
+						<option value="Femenino"> Mujer </option>
+					</select>
+
+						<br> 
+
+					<label for="address"> Dirección </label> <label for="Rep"> Representante (Nombre y Apellido) </label> <label for="spouse"> ¿Cónyuge? </label> 	
+
+						<br>
+
+					<input type="text" name="address" placeholder="Ej: Barrio Cementerio, Calle 5"> 
+					<input type="text" name="Rep" placeholder="Ej: Elimelec Bello"> 
+					<select name="spouse">
+						<option value="No"> No </option>
+						<option value="Cristiano"> Sí, Cristiano </option>
+						<option value="Inconverso">  Sí, Inconverso </option>
+						<option value="0" hidden>   </option>
+					</select>
+					
+						<br>
+
+					<label for="phone"> Teléfono </label> <label for="CI"> Cédula </label> 
+
+						<br>
+
+					<input type="number" name="phone" maxlength="16" placeholder="Ej: 04145027537">
+					<input type="number" name="CI" max="99000000" placeholder="Ej: 24859532">
+					
+						
+						<br>
+
+					<p id="formErrorMsg"> </p>
+					<button type="button" id="st-Panel-Form-Btn" disabled="true"> Añadir </button>
+
+						<br> 
+
+								
+						<p id="formErrorMsg"> </p>
+				</form>
+				
+				<section id="st-Panel-Form-Success">
+					<img src="../recursos/imagenes/Kerygma/done.png" width="40%" height="40%" style="margin: 0 auto;"/> 
+					<p id="successText"> ¡Estudiante añadido a la base de datos con Éxito!  </p>
+					<p id="successNote"> </p>
+				</section>
+			</div>
+
+			<div id="searchItemContainer">
+				<p> Buscar </p>
+
+				<div id="closeSearch">
+					<img src="../recursos/imagenes/Kerygma/close.png" onclick="closeSearch()" title="Cerrar" />
+				</div>
+
+				<div id="searchBarContainer">
+
+					<div id="searchBar">
+						<input name="search" type="text" id="searchInput" spellcheck="false" maxlength="70" placeholder="Buscar estudiantes, personal o mentores...">
+						<div id="searchBtn" onclick="search()" title="Buscar">
+
+						</div>
+					</div>
+
+					<div id="searchOptions">
+
+						<div id="searchBy">
+
+								<p> Buscar por </p>
+									<select name="searchBy">
+										
+										<option value="name" selected> Nombres </option>
+										<option value="CI" > Cédula </option>
+										<option value="Código" > Código </option>
+
+									</select>
+
+						</div>
+					
+
+					</div>
+
+				</div>
+				<!-- 
+
+					SVG Circles
+
+					<svg height="100" width="100">
+  						<circle cx="50" cy="50" r="40"  stroke-width="3" fill="red" />
+  
+ 						 <text class="circleText" x="50%" y="50%" text-anchor="middle" stroke="green" font-family="Arial" font-size="120%"  alignment-baseline="middle" > M </text>
+					</svg>
+
+				-->
+
+				<div id="searchResultsContainer">
+					<ul>
+						<li class="resultWrapper" hidden>
+						 <div class="searchResult">
+						 	<div class="resultTypeIcon"> 
+						 		<img src="../recursos/imagenes/Kerygma/userBlackBig.png" />
+						 	</div>
+
+						 	<div class="resultDetails"> 
+
+						 		<div class="resultTitle">
+						 			Jhon Doe Of Jesús
+						 		</div>
+
+						 		<div class="genderIcon"> 
+						 			<img src="../recursos/imagenes/Kerygma/maleGender.png" />
+						 		</div>
+
+						 		<br>
+
+						 		<p class="resultDataKey" style="margin: 1% 0 1% 2%;"> Edad </p>
+						 			<span class="resultData resultAge"> 16 </span>
+						 		<p class="resultDataKey"> Sexo </p>
+						 			<span class="resultData resultSex"> Mujer  </span>
+						 		<p class="resultDataKey"> ID </p>
+						 			<span class="resultData resultId"> 28362323 </span>
+
+
+						 	</div>
+
+						 	<div class="resultTable">
+						 		<div class="circle resultTableIcon"> 
+						 			<p  alignment-baseline="middle"> M </p>
+						 		</div>
+						 	</div>
+
+						  </div> 
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+		</body>
+		
+	<script src="../recursos/librerias/jquery-3.3.1.js"></script>
+	<script type="application/javascript" src="../JavaScript/kerygmaFront.js"></script>
+</html>
